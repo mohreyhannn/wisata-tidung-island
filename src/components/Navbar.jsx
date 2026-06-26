@@ -4,15 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
 import logo from "../assets/logo/logo1.png";
 
-const menus = [
-  "home",
-  "tentang",
-  "destinasi",
-  "aktivitas",
-  "paket",
-  "faq",
-  "kontak",
-];
+const menus = ["home", "tentang", "destinasi", "aktivitas", "paket", "faq", "kontak"];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,10 +12,8 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => setScroll(window.scrollY > 30);
-
     window.addEventListener("scroll", handleScroll);
     handleScroll();
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -42,23 +32,16 @@ export default function Navbar() {
         }`}
       >
         <div
-          className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-all duration-300 lg:px-8 ${
-            scroll ? "h-20" : "h-24"
+          className={`mx-auto flex max-w-7xl items-center justify-between px-5 transition-all duration-300 sm:px-6 lg:px-8 ${
+            scroll ? "h-16 lg:h-20" : "h-20 lg:h-24"
           }`}
         >
-          <Link
-            to="home"
-            smooth
-            duration={500}
-            offset={-80}
-            className="cursor-pointer"
-            onClick={closeMenu}
-          >
+          <Link to="home" smooth duration={500} offset={-80} className="cursor-pointer" onClick={closeMenu}>
             <img
               src={logo}
               alt="Wisata Tidung Island"
               className={`transition-all duration-300 ${
-                scroll ? "h-14" : "h-20"
+                scroll ? "h-12 lg:h-14" : "h-14 lg:h-20"
               }`}
             />
           </Link>
@@ -96,12 +79,10 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setOpen((prev) => !prev)}
-            className={`lg:hidden transition ${
-              scroll ? "text-slate-800" : "text-white drop-shadow-md"
-            }`}
+            className={`lg:hidden transition ${scroll ? "text-slate-800" : "text-white drop-shadow-md"}`}
             aria-label="Toggle menu"
           >
-            {open ? <HiOutlineX size={34} /> : <HiOutlineMenuAlt3 size={34} />}
+            {open ? <HiOutlineX size={32} /> : <HiOutlineMenuAlt3 size={32} />}
           </button>
         </div>
       </motion.nav>
@@ -122,12 +103,10 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -12, scale: 0.96 }}
               transition={{ duration: 0.22 }}
-              className="fixed right-4 top-24 z-[70] w-[86%] max-w-sm overflow-hidden rounded-3xl border border-sky-100 bg-white shadow-2xl lg:hidden"
+              className="fixed right-4 top-20 z-[70] w-[86%] max-w-sm overflow-hidden rounded-3xl border border-sky-100 bg-white shadow-2xl lg:top-24 lg:hidden"
             >
               <div className="flex items-center justify-between px-5 py-4">
-                <p className="text-sm font-bold uppercase tracking-wide text-sky-600">
-                  Menu Navigasi
-                </p>
+                <p className="text-sm font-bold uppercase tracking-wide text-sky-600">Menu Navigasi</p>
 
                 <button
                   type="button"

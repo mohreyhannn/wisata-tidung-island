@@ -1,5 +1,11 @@
 import { motion } from "framer-motion";
-import { FaMoneyBillWave, FaUserTie, FaCamera, FaBoxOpen, FaHeadset } from "react-icons/fa";
+import {
+  FaMoneyBillWave,
+  FaUserTie,
+  FaCamera,
+  FaBoxOpen,
+  FaHeadset,
+} from "react-icons/fa";
 
 const data = [
   {
@@ -31,27 +37,24 @@ const data = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* Title */}
+    <section id="why" className="bg-white py-16 md:py-20">
+      <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-10 text-center md:mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-800">
+          <h2 className="text-3xl font-bold text-slate-800 sm:text-4xl md:text-5xl">
             Kenapa Memilih Kami?
           </h2>
-          <p className="text-slate-500 mt-4">
+
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-500">
             Pengalaman wisata terbaik untuk liburan kamu di Kepulauan Seribu
           </p>
         </motion.div>
 
-        {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
           {data.map((item, index) => (
             <motion.div
               key={index}
@@ -59,22 +62,21 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group bg-sky-50 hover:bg-sky-600 transition rounded-2xl p-6 text-center shadow-sm hover:shadow-xl cursor-pointer"
+              className="group cursor-pointer rounded-2xl bg-sky-50 p-5 text-center shadow-sm transition hover:bg-sky-600 hover:shadow-xl lg:p-6"
             >
-              <div className="text-3xl text-sky-600 group-hover:text-white flex justify-center mb-4 transition">
+              <div className="mb-4 flex justify-center text-3xl text-sky-600 transition group-hover:text-white">
                 {item.icon}
               </div>
 
-              <h3 className="font-bold text-slate-800 group-hover:text-white mb-2">
+              <h3 className="mb-2 font-bold text-slate-800 group-hover:text-white">
                 {item.title}
               </h3>
 
-              <p className="text-sm text-slate-500 group-hover:text-white/90">
+              <p className="text-sm leading-relaxed text-slate-500 group-hover:text-white/90">
                 {item.desc}
               </p>
             </motion.div>
           ))}
-
         </div>
       </div>
     </section>

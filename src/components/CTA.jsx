@@ -10,33 +10,33 @@ export default function CTA() {
       <div className="absolute -right-28 bottom-0 h-96 w-96 rounded-full bg-cyan-200/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-5xl text-center">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-5 py-2 text-sm font-black uppercase tracking-wide text-white backdrop-blur-md">
-          <Sparkles size={18} />
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2 text-xs font-black uppercase tracking-wide text-white backdrop-blur-md md:px-5 md:text-sm">
+          <Sparkles size={16} />
           Booking Sekarang
         </span>
 
-        <h2 className="mt-6 text-4xl font-black leading-tight text-white md:text-6xl">
+        <h2 className="mt-5 text-3xl font-black leading-tight text-white sm:text-4xl md:text-6xl">
           Siap Liburan Bersama Kami?
         </h2>
 
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-sky-50 md:text-lg">
+        <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-sky-50 md:mt-6 md:text-lg">
           Wujudkan liburan impianmu ke Pulau Tidung bersama Wisata Tidung
           Island dengan pelayanan terbaik, harga transparan, dan pengalaman
           wisata yang berkesan.
         </p>
 
-        <div className="mx-auto mt-10 grid max-w-3xl gap-4 md:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-3xl gap-3 md:mt-10 md:grid-cols-3 md:gap-4">
           <Feature text="Open Trip" />
           <Feature text="Private Trip" />
           <Feature text="Harga Transparan" />
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-9 flex justify-center md:mt-12">
           <PrimaryButton
             href="https://wa.me/6285770359378"
-            className="bg-green-500 px-9 py-5 text-white shadow-2xl shadow-green-900/25 hover:bg-green-600"
+            className="bg-green-500 px-7 py-4 text-white shadow-2xl shadow-green-900/25 hover:bg-green-600 md:px-9 md:py-5"
           >
-            <MessageCircle size={24} />
+            <MessageCircle size={22} />
             Booking via WhatsApp
           </PrimaryButton>
         </div>
@@ -47,8 +47,8 @@ export default function CTA() {
 
 function Feature({ text }) {
   return (
-    <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/25 bg-white/15 px-5 py-4 text-white shadow-lg backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20">
-      <CheckCircle2 size={22} className="text-lime-300" />
+    <div className="flex items-center justify-center gap-3 rounded-2xl border border-white/25 bg-white/15 px-4 py-3 text-white shadow-lg backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/20 md:px-5 md:py-4">
+      <CheckCircle2 size={20} className="text-lime-300" />
       <span className="font-bold">{text}</span>
     </div>
   );

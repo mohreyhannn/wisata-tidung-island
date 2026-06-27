@@ -1,16 +1,18 @@
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import Tidung1 from "../assets/images/Tidung1.jpg";
+import payung2 from "../assets/images/payung2.jpg";
 
 const destinations = [
   {
     title: "Pulau Tidung",
     desc: "Destinasi favorit di Kepulauan Seribu dengan Jembatan Cinta, pantai indah, snorkeling, banana boat, dan suasana pulau yang cocok untuk liburan keluarga maupun teman.",
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    img: Tidung1,
   },
   {
     title: "Pulau Payung",
     desc: "Pulau yang masih alami dengan air laut jernih dan suasana tenang. Cocok untuk healing, camping, snorkeling, menikmati sunset, dan liburan santai jauh dari keramaian.",
-    img: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
+    img: payung2,
   },
 ];
 

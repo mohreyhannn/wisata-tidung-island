@@ -37,24 +37,24 @@ const data = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="bg-white py-16 md:py-20">
+    <section id="why" className="bg-white py-14 md:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-10 text-center md:mb-12"
+          className="mb-8 text-center md:mb-12"
         >
           <h2 className="text-3xl font-bold text-slate-800 sm:text-4xl md:text-5xl">
             Kenapa Memilih Kami?
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-500">
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-500 md:mt-4 md:text-base">
             Pengalaman wisata terbaik untuk liburan kamu di Kepulauan Seribu
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-5 lg:grid-cols-5 lg:gap-6">
           {data.map((item, index) => (
             <motion.div
               key={index}
@@ -62,17 +62,17 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group cursor-pointer rounded-2xl bg-sky-50 p-5 text-center shadow-sm transition hover:bg-sky-600 hover:shadow-xl lg:p-6"
+              className="group cursor-pointer rounded-2xl bg-sky-50 p-4 text-center shadow-sm transition hover:bg-sky-600 hover:shadow-xl md:p-5 lg:p-6"
             >
-              <div className="mb-4 flex justify-center text-3xl text-sky-600 transition group-hover:text-white">
+              <div className="mb-3 flex justify-center text-2xl text-sky-600 transition group-hover:text-white md:mb-4 md:text-3xl">
                 {item.icon}
               </div>
 
-              <h3 className="mb-2 font-bold text-slate-800 group-hover:text-white">
+              <h3 className="mb-1.5 text-base font-bold text-slate-800 group-hover:text-white md:mb-2 md:text-lg">
                 {item.title}
               </h3>
 
-              <p className="text-sm leading-relaxed text-slate-500 group-hover:text-white/90">
+              <p className="text-xs leading-relaxed text-slate-500 group-hover:text-white/90 md:text-sm">
                 {item.desc}
               </p>
             </motion.div>

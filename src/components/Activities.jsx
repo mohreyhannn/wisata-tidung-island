@@ -24,34 +24,34 @@ const activities = [
 
 export default function Activities() {
   return (
-    <section id="aktivitas" className="relative overflow-hidden bg-white py-16 md:py-20 lg:py-24">
+    <section id="aktivitas" className="relative overflow-hidden bg-white py-14 md:py-20 lg:py-24">
       <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-sky-100/80 blur-3xl" />
       <div className="absolute -top-24 -right-40 h-96 w-96 rounded-full bg-sky-100/70 blur-3xl" />
       <div className="absolute bottom-0 left-0 h-28 w-full bg-gradient-to-t from-sky-100/80 to-transparent" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
-        <div className="mb-10 text-center md:mb-14">
+        <div className="mb-8 text-center md:mb-14">
           <span className="inline-flex items-center gap-2 rounded-full bg-sky-100 px-4 py-2 text-xs font-black uppercase tracking-wide text-sky-700 md:px-5 md:text-sm">
             Aktivitas Seru
             <Waves size={16} strokeWidth={2.2} className="md:size-[18px]" />
           </span>
 
-          <h2 className="mt-5 text-4xl font-black tracking-tight text-slate-950 sm:text-5xl md:text-6xl lg:mt-6 lg:text-7xl">
+          <h2 className="mt-4 text-3xl font-black tracking-tight text-slate-950 sm:text-4xl md:mt-6 md:text-6xl lg:text-7xl">
             Aktivitas Wisata
           </h2>
 
-          <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-slate-500 md:mt-5 md:text-xl">
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-slate-500 md:mt-5 md:text-xl">
             Nikmati berbagai aktivitas seru di Pulau Tidung & Pulau Payung
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-7">
           {activities.slice(0, 4).map((item) => (
             <Card key={item.title} item={item} />
           ))}
         </div>
 
-        <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:mt-7 lg:grid-cols-5 lg:gap-7">
+        <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 md:mt-5 md:gap-5 lg:mt-7 lg:grid-cols-5 lg:gap-7">
           {activities.slice(4).map((item) => (
             <Card key={item.title} item={item} />
           ))}
@@ -65,22 +65,24 @@ function Card({ item }) {
   const Icon = item.icon;
 
   return (
-    <div className="group flex min-h-[260px] flex-col items-center justify-center rounded-[24px] border border-sky-100 bg-white px-5 py-6 text-center shadow-[0_12px_35px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-2 hover:border-sky-200 hover:shadow-[0_22px_50px_rgba(14,165,233,0.18)] md:min-h-[300px] md:px-6 md:py-7 lg:min-h-[330px] lg:rounded-[28px] lg:px-7 lg:py-8">
-      <div className="mb-5 flex h-24 w-24 items-center justify-center rounded-full bg-sky-50 transition-all duration-300 group-hover:scale-105 group-hover:bg-sky-600 md:h-32 md:w-32 lg:mb-7 lg:h-36 lg:w-36">
+    <div className="group flex min-h-[210px] flex-col items-center justify-center rounded-[22px] border border-sky-100 bg-white px-4 py-5 text-center shadow-[0_10px_26px_rgba(15,23,42,0.07)] transition-all duration-300 hover:-translate-y-2 hover:border-sky-200 hover:shadow-[0_22px_50px_rgba(14,165,233,0.18)] md:min-h-[260px] md:px-5 md:py-6 lg:min-h-[330px] lg:rounded-[28px] lg:px-7 lg:py-8">
+      <div className="mb-3 flex h-20 w-20 items-center justify-center rounded-full bg-sky-50 transition-all duration-300 group-hover:scale-105 group-hover:bg-sky-600 md:mb-5 md:h-28 md:w-28 lg:mb-7 lg:h-36 lg:w-36">
         <Icon
-          size={48}
+          size={38}
           strokeWidth={1.7}
-          className="text-sky-600 transition-all duration-300 group-hover:text-white md:size-[58px] lg:size-[66px]"
+          className="text-sky-600 transition-all duration-300 group-hover:text-white md:size-[54px] lg:size-[66px]"
         />
       </div>
 
-      <h3 className="text-xl font-black text-slate-950 md:text-2xl">{item.title}</h3>
+      <h3 className="text-lg font-black text-slate-950 md:text-xl lg:text-2xl">
+        {item.title}
+      </h3>
 
-      <p className="mt-3 text-sm leading-relaxed text-slate-500 md:mt-4 md:text-base">
+      <p className="mt-2 text-xs leading-relaxed text-slate-500 md:mt-3 md:text-sm lg:mt-4 lg:text-base">
         {item.desc}
       </p>
 
-      <div className="mt-5 h-1 w-10 rounded-full bg-sky-500 transition-all duration-300 group-hover:w-20 md:mt-7 md:w-12" />
+      <div className="mt-4 h-1 w-9 rounded-full bg-sky-500 transition-all duration-300 group-hover:w-20 md:mt-5 md:w-10 lg:mt-7 lg:w-12" />
     </div>
   );
 }
